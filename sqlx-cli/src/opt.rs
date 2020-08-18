@@ -5,6 +5,8 @@ pub struct Opt {
     #[clap(subcommand)]
     pub command: Command,
 
+    /// Optionally provider the database_url. Supercedes DATABASE_URL
+    /// environment variable
     #[clap(short = "D", long)]
     pub database_url: Option<String>,
 }
